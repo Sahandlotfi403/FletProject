@@ -33,5 +33,5 @@ class MainCard(ft.Container ):
          (4,"Alerts Today"),
          (124,"Total Detection"),
   ]
-  return ft.Row(controls=[
+  return ft.ResponsiveRow(controls=[
    *([self.card(count, label) for count, label in items])])

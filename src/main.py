@@ -2,7 +2,7 @@ import flet as ft
 from SideBar import SideBar
 from datetime import datetime
 from maincard import MainCard
-
+from stream import MainStream
 def main(page: ft.Page):
   # page.theme=ft.ThemeMode.LIGHT,
   today = datetime.now().strftime("%d/%m/%y, %H%M%S")
@@ -56,6 +56,7 @@ def main(page: ft.Page):
                 )
               ,
               MainCard(),
+              MainStream().buildUi()
               ]
             ),
           ),
