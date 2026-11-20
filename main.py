@@ -1,6 +1,7 @@
 import flet as ft
 from SideBar import SideBar
 from datetime import datetime
+from maincard import MainCard
 
 def main(page: ft.Page):
   # page.theme=ft.ThemeMode.LIGHT,
@@ -23,9 +24,10 @@ def main(page: ft.Page):
             width=page.width,
             content=ft.Column(
               controls=[
+
                 ft.Container(
                   padding=ft.Padding.all(10),
-                  bgcolor="#1a152e",
+                  bgcolor="#1b1a1f",
                   border=ft.Border(bottom=ft.BorderSide(1, color="#c0c0c0")),
 
                   content=ft.Row(
@@ -46,13 +48,19 @@ def main(page: ft.Page):
                       ft.Button(
                         content=
                         ft.Text("Refresh data"),
-                      )
-                    ]
-                  ))
+                      ),
 
+                    ]
+
+                  ),
+                )
+              ,
+              MainCard(),
               ]
-            ))
-        ])
+            ),
+          ),
+        ],
+      ),
     )
   )
 
